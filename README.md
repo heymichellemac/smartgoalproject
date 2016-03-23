@@ -12,6 +12,9 @@ This application is connected to a firebase system in order to manage the applic
 
 Once a user has registered and logged in to this application they can create, edit or delete smart goals as well as look at their own user information and update it accordingly.
 
+For the purposes of this assigment the demo of this project can be found at:
+[smartgoals.mishacreatrix.com](http://smartgoals.mishacreatrix.com/#/app/home)
+
 ------
 
 ###Features
