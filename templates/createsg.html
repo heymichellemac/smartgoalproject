@@ -1,0 +1,42 @@
+<!--This page allows the user to create a new smart goal. The values defined in th ng-model directives will create a new smart goal entry with those values-->
+
+<ion-view view-title="Create Smart Goal">
+	<ion-content>
+		<div class="container">
+			<div class="list list-inset">
+				<label class="item item-input">
+					<span class="input-label smartgoaltitle">Name of the smart goal</span>
+					<input type="text" placeholder="Smart goal name" ng-model="smartgoal.goaltitle" novalidate ng-required="true">
+				</label>
+		
+				<div class="item item-divider smartgoaltitle">Specific</div>
+				<label class="item item-input">
+					<textarea rows="8" placeholder="Outline the specifics of your goal" ng-model="smartgoal.goalspecific"></textarea>
+				</label>
+
+				<div class="item item-divider smartgoaltitle">Measurable</div>
+				<label class="item item-input">
+					<textarea rows="8" placeholder="How will I know when it is accomplished?" ng-model="smartgoal.goalmeasurable"></textarea>
+				</label>
+
+				<div class="item item-divider smartgoaltitle">Achievable</div>
+				<label class="item item-input">
+					<textarea rows="8" placeholder="How realistic is the goal based on other constraints?" ng-model="smartgoal.goalachievable"></textarea>
+				</label>
+
+				<div class="item item-divider smartgoaltitle">Relevant</div>
+				<label class="item item-input">
+					<textarea rows="8"placeholder="Does this seem worthwhile?" ng-model="smartgoal.goalrelevant"></textarea>
+				</label>
+			</div>
+			<!-- This button when clicked will add a ew smart goal with the fields defined in the fields above -->
+	
+				
+					<label class="item">
+						<button class="button button-block button-positive" ng-click="addSmartGoal()">Create</button>
+					</label>
+		
+		</div>
+
+	</ion-content>
+</ion-view>

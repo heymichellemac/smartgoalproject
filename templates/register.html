@@ -1,0 +1,46 @@
+<!-- This is the register view that allows new users to register on this application -->
+<ion-view view-title="Register">
+<ion-content>
+<p ng-show="message" class="padding">{{message}}</p><br>
+	<div class="container">
+	<!--This is the registration form which allows users to submit their details in order to register -->
+	<form name="registrationform" ng-submit="register()">
+		<div class="list list-input-inset">
+			<label class="item item-input">
+		  	<span class="input-label">First Name</span>
+		  	<!-- ng-model directive corresponds to the object properties being utilised -->
+		  	<!-- ng-required directive below means this field is a required field that must be filled in -->
+		    <input type="text" name="firstname" placeholder="Joe" ng-model="user.firstname" ng-required="true">
+			  </label>
+			  <label class="item item-input">
+			  	<span class="input-label">Last Name</span>
+			    <input type="text" name="lastname" placeholder="Bloggs" ng-model="user.lastname" ng-required="true">
+			  </label>
+			  <label class="item item-input">
+			  	<span class="input-label">Username</span>
+			    <input type="text" name="username" placeholder="Joebloggs" ng-model="user.username" ng-required="true">
+			  </label>
+			  <label class="item item-input">
+			  	<span class="input-label">Job Title</span>
+			    <input type="text" name="jobtitle" placeholder="Software Developer" ng-model="user.jobtitle" ng-required="true">
+			  </label>
+			  <label class="item item-input">
+			  	<span class="input-label">Email</span>
+			    <input type="email" name="email" placeholder="joebloggs@email.com" ng-model="user.email" ng-required="true">
+			  </label><label class="item item-input">
+			  	<span class="input-label">Password</span>
+			    <input type="password" name="password" placeholder="*****" ng-model="user.password" ng-required="true">
+			  </label>
+
+			<!-- this button is not selectable until all fields have been entered in the registration form -->
+			<button class="button button-block button-positive" type="submit" ng-disabled="registrationform.$invalid">Register</button>
+          	
+          	<!-- this button when clicked performes the login function -->
+          	<ion-item><p> or <a ng-click="login()">Login</a></p></ion-item>
+
+		</div>
+	</form>
+</div>
+
+</ion-content>
+</ion-view>

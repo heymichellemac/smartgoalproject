@@ -1,0 +1,57 @@
+<!-- This is the profile view which displays the user information of the currently logged in user -->
+<ion-view view-title="Profile">
+  <ion-content ng-controller="ProfileController">
+		<ion-item ng-repeat="(key, user) in users  | filter: {regUser: whichuser}">	
+			<div class="card" id="startCard" ng-show="showstartCard">
+				<div class="row">
+					<div class="hidden-xs col-sm-5">
+						<img src="../img/user.png" />
+					</div>
+					<div class="col-xs-12 col-sm-7">
+						<div class="profileHeading">
+							<h2>{{user.username}}</h2>
+							<h3><b>Name:</b> {{user.firstname}} {{user.lastname}}</h3>
+							<h3><b>Email:</b> {{user.email}}</h3>
+							<h3><b>Job Title:</b> {{user.jobtitle}}</h3>
+						</div>
+					</div>
+				</div>
+				<br>
+					<button class="button button-positive pull-left" ng-click="hideCard()">
+						<i class="icon ion-edit"></i> Update </button>
+					<button class="button button-energized pull-right" ng-click="deleteSmartGoal(key)">
+						<i class="icon ion-trash-b"></i> Delete User </button>
+			</div>
+
+			<div class="card padding" id="secondCard" ng-show="showsecondCard">
+
+				<label class="item item-input">
+			  	<span class="input-label">First Name</span>
+			    <input type="text" name="firstname" placeholder="Joe" ng-model="user.firstname" ng-change="users.$save(user)" >
+				  </label>
+				  <label class="item item-input">
+				  	<span class="input-label">Last Name</span>
+				    <input type="text" name="lastname" placeholder="Bloggs" ng-model="user.lastname" ng-change="users.$save(user)">
+				  </label>
+				  <label class="item item-input">
+				  	<span class="input-label">Username</span>
+				    <input type="text" name="username" placeholder="Joebloggs" ng-model="user.username" ng-change="users.$save(user)">
+				  </label>
+				  <label class="item item-input">
+				  	<span class="input-label">Job Title</span>
+				    <input type="text" name="jobtitle" placeholder="Software Developer" ng-model="user.jobtitle" ng-change="users.$save(user)">
+				  </label>
+				  <label class="item item-input">
+				  	<span class="input-label">Email</span>
+				    <input type="email" name="email" placeholder="joebloggs@email.com" ng-model="user.email" ng-change="users.$save(user)">
+				  </label><label class="item item-input">
+				  	<span class="input-label">Password</span>
+				    <input type="password" name="password" placeholder="*****" ng-model="user.password" ng-change="users.$save(user)">
+				  </label>
+
+				<button class="button button-positive pull-right" ng-click="updateUser(key)">
+					<i class="icon ion-edit"></i> Save</button>
+			</div>
+		</ion-item>
+  </ion-content>
+</ion-view>

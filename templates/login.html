@@ -1,0 +1,37 @@
+<!-- login modal view -->
+<ion-modal-view class="modalBox">
+  <ion-header-bar>
+    <h1 class="title">Login</h1>
+    <div class="buttons">
+      <!-- this button when clicked closes the modal-->
+      <button class="button button-positive" ng-click="closeLogin()"><i class="icon ion-close-circled"></i></button>
+    </div>
+  </ion-header-bar>
+
+  <ion-content>
+    <!-- login form that when submitted performs the doLogin function which logs in the user -->  
+    <form name="loginform" ng-submit="doLogin()" novalidate>
+
+      <div class="list list-inset">
+        <label class="item item-input">
+            <i class="icon ion-person placeholder-icon"></i>
+            <input type="email" placeholder="Email" ng-model="user.email" ng-required="true">
+        </label>
+
+        <label class="item item-input">
+            <i class="icon ion-locked placeholder-icon"></i>
+            <input type="password" placeholder="Password" ng-required="true" ng-model="user.password">
+        </label>
+        
+      </div>
+
+      <!-- this button will not be clickable until the fields are filled in (ng-disabled) -->
+      <div class="list list-inset">
+        <button class="button button-block button-positive" type="submit" ng-disabled="loginform.$invalid" ng-click="closeLogin()">Login</button>
+     
+      <!-- This button when clicked will open up the registration page and also close the login modal -->     
+        <ion-item href="#/app/register" class="positive" ng-click="closeLogin()"> Or Register</ion-item>
+        </div>
+    </form>
+  </ion-content>
+</ion-modal-view>

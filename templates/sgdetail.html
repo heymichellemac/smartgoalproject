@@ -1,0 +1,70 @@
+<!-- The ng-repeat directive in this view combined with the filter loops through the smart goal data from firebase and filters based on the selected smart goal -->
+
+<ion-header-bar class="bar-positive">Smart Goal</ion-header-bar>
+<ion-view>
+	<ion-content>
+		<div class="container">
+			<ion-list class="list-inset">
+				<ion-item class="item-text-wrap" ng-repeat="(key, smartgoal) in smartgoals | filter: {goaltitle: whichsmartgoal}">
+					<div class="card" id="startCard" ng-show="showstartCard">
+						<div class="item item-divider smartgoaltitle">
+							<h2><b>{{smartgoal.goaltitle}}</b></h2>
+						</div>
+						<div class="item item-text-wrap smartgoaltitle">
+							<h3><b>Specific:</b></h3><br>
+							<p>{{smartgoal.goalspecific}}</p><br><hr>
+							
+							<h3><b>Measurable:</b></h3><br>
+							<p>{{smartgoal.goalmeasurable}}</p><br><hr>
+							
+							<h3><b>Achievable:</b></h3><br>
+							<p>{{smartgoal.goalachievable}}</p><br><hr>
+							
+							<h3><b>Relevant:</b></h3><br>
+							<p>{{smartgoal.goalrelevant}}</p>
+						</div>
+
+						<br>
+						<button class="button button-positive pull-left" ng-click="hideCard()">
+							<i class="icon ion-edit"></i> Update</button>
+						<button class="button button-energized pull-right" ng-click="deleteSmartGoal(key)">
+							<i class="icon ion-trash-b"></i> Delete Smart Goal
+						</button>
+					</div>
+
+					<div class="card padding" id="secondCard" ng-show="showsecondCard">
+
+						<label class="item item-input">
+							<span class="input-label smartgoaltitle">Name of the smart goal</span>
+							<input type="text" placeholder="{{smartgoal.goaltitle}}" ng-model="smartgoal.goaltitle" novalidate ng-change="smartgoals.$save(smartgoal)">
+						</label>
+
+						<div class="item item-divider smartgoaltitle">Specific</div>
+							<label class="item item-input">
+							<textarea rows="8" placeholder="Outline the specifics of your goal" ng-model="smartgoal.goalspecific" ng-change="smartgoals.$save(smartgoal)"></textarea>
+							</label>
+						<div class="item item-divider smartgoaltitle">Measurable</div>
+							<label class="item item-input">
+								<textarea rows="8" placeholder="How will I know when it is accomplished?" ng-model="smartgoal.goalmeasurable" ng-change="smartgoals.$save(smartgoal)"></textarea>
+							</label>
+
+							<div class="item item-divider smartgoaltitle">Achievable</div>
+							<label class="item item-input">
+								<textarea rows="8" placeholder="How realistic is the goal based on other constraints?" ng-model="smartgoal.goalachievable" ng-change="smartgoals.$save(smartgoal)"></textarea>
+							</label>
+
+							<div class="item item-divider smartgoaltitle">Relevant</div>
+							<label class="item item-input">
+								<textarea rows="8"placeholder="Does this seem worthwhile?" ng-model="smartgoal.goalrelevant" ng-change="smartgoals.$save(smartgoal)"></textarea>
+							</label>
+
+							<button class="button button-positive pull-right" ng-click="updateSmartGoal(key)">
+							<i class="icon ion-edit"></i> Save</button>
+						</div>
+
+					
+				</ion-item>
+			</ion-list>
+		</div>
+	</ion-content>
+</ion-view>

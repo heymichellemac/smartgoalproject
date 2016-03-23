@@ -1,0 +1,23 @@
+<!-- this smartgoal view displays the list of smart goals that are pulled from firebase based on the current logged in user. The list of smart goals is looped through using the ng-repeat directive. This page also contains a search bar which allows you to search for a specific smart goal -->
+<ion-view view-title="Smart Goals">
+	<div class="bar bar-subheader item-input-inset bar-light">
+		<label class="item-input-wrapper">
+			<!-- this search bar allows you to search through the list of smart goals -->
+			<i class="icon ion-search placeholder-icon"></i>
+			<input type="search" ng-model="sgquery" placeholder="Search">
+		</label>	
+	</div>
+	
+	<ion-content ng-controller="SmartGoalController"><br><br>
+		<ion-item ng-repeat="(key, smartgoal) in smartgoals | filter:sgquery" href="#/app/smartgoal/{{smartgoal.goaltitle}}">
+			<div class="container">
+				<div class="padding smartgoalitem">
+					<h2 class="pull-left">{{smartgoal.goaltitle}}</h2>
+					<button class="button button-positive pull-right">
+					<i class="icon ion-edit"></i> Edit</button>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</ion-item>		
+	</ion-content>
+</ion-view>

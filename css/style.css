@@ -1,0 +1,90 @@
+/* Cutomized CSS */
+h2{font-size: 1.3rem !important;}
+h3{font-size: 1.1rem !important;}
+
+hr{border: 1px solid #eee !important;}
+
+.modalBox{
+	border: 3px solid #009688;
+	border-radius:  8px;
+	box-shadow: 4px 4px 5px #111;
+}
+.modalBox h1{
+	color:#009688;
+	font-size: 1.5em !important;
+}
+
+.item h2{
+	color:#009688;
+}
+
+.item b{
+	color:#009688;
+}
+
+.item span{
+	color:#009688;
+}
+
+.item-divider{
+	background-color: #B2DFDB;
+}
+
+.button-energized{
+	background-color: #FF5252 !important;
+}
+.button-calm{
+	background-color: #fff !important;
+	color: #727272 !important;
+}
+img{width:40%;
+	max-width: 200px;}
+
+.pull-right{
+	float: right;
+}
+.pull-left{
+	float: left;
+}
+.profileHeading h2{
+	font-size: 2rem!important;
+}
+.profileHeading h3{
+	font-size: 1.2rem!important;
+}
+
+input.ng-invalid.ng-touched{
+	border-bottom: 1px solid #DA3637;
+}
+
+input.ng-valid.ng-touched{
+	border-bottom: 1px solid #509D12;
+}
+
+.homepageImage{
+	background: url("../img/img3.jpg") no-repeat center center fixed;
+	-webkit-background-size:cover;
+	-moz-background-size:cover;
+	-o-background-size:cover;
+	background-size:cover;
+	background-color: #009688;
+}
+
+.branding{
+	width:80%;
+	margin: 0 auto;
+	max-width:300px;
+	margin-top: 25px;
+	text-align: center;
+	background-color: #fff;
+	border-radius: 8px;
+	opacity: .8;
+	border: 2px solid #009688;
+	box-shadow: 2px 2px 3px #777;
+}
+
+.branding h2{
+	font-size: 2rem!important;
+	color: #009688;
+	font-weight: bold;
+}
