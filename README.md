@@ -55,8 +55,8 @@ This should automatically open up the app in your default web browser where you 
 
 ###UI Design
 
-![alt text](https://github.com/mishacreatrix/smartgoalproject/blob/master/projectFiles/home.PNG "Home Screen")
-![alt text](https://github.com/mishacreatrix/smartgoalproject/blob/master/projectFiles/login.PNG "Login Screen")
+![alt text](https://github.com/mishacreatrix/smartgoalproject/blob/master/projectFiles/homepage.PNG "Home Screen")
+![alt text](https://github.com/mishacreatrix/smartgoalproject/blob/master/projectFiles/loginpage.PNG "Login Screen")
 ![alt text](https://github.com/mishacreatrix/smartgoalproject/blob/master/projectFiles/profile.PNG "Profile Screen")
 ![alt text](https://github.com/mishacreatrix/smartgoalproject/blob/master/projectFiles/register.PNG "Register Screen")
 ![alt text](https://github.com/mishacreatrix/smartgoalproject/blob/master/projectFiles/smartgoals.PNG "Smartgoals Screen")
